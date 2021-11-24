@@ -32,7 +32,7 @@ export default function Scribble() {
         cy="83"
         rx="180"
         ry="60"
-        stroke="#3E863D"
+        stroke="#C084FC"
         variants={draw}
         custom={1}
         strokeWidth={4}
@@ -43,7 +43,7 @@ export default function Scribble() {
         cy="80"
         rx="170"
         ry="60"
-        stroke="#3E863D"
+        stroke="#C084FC"
         variants={draw}
         custom={2}
         strokeWidth={3}
@@ -54,7 +54,7 @@ export default function Scribble() {
         cy="80"
         rx="180"
         ry="70"
-        stroke="#3E863D"
+        stroke="#C084FC"
         variants={draw}
         custom={3}
         strokeWidth={2}
