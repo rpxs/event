@@ -9,5 +9,5 @@ datasource db {
 
 model Ticket {
   id    Int    @id @default(autoincrement())
-  email String @unique @db.VarChar(255)
+  email String @unique
 }

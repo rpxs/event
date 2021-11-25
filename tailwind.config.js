@@ -24,6 +24,7 @@ module.exports = {
       purple: colors.purple,
       sky: colors.sky,
       blue: colors.blue,
+      orange: colors.orange,
       app: app,
     },
   },
