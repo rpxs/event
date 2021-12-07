@@ -1,41 +1,44 @@
 import Navbar from "../components/core/Navbar";
 import { useRef } from "react";
 import Scribble from "../components/plus/Scribble";
-import toast from "react-hot-toast"
+import toast from "react-hot-toast";
+import { useRouter } from "next/router";
 export default function Home() {
+  const router = useRouter();
   const inputRef = useRef(null);
   const register = async (e) => {
     e.preventDefault();
-    const res = await fetch(
-      '/api/ticket/create',
-      {
-        body: JSON.stringify({
-          email: inputRef.current.value,
-        }),
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        method: 'POST'
+    const res = await fetch("/api/ticket/create", {
+      body: JSON.stringify({
+        email: inputRef.current.value,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+    });
+    if (typeof window !== "undefined") {
+      const result = await res.json();
+      if (result.error) {
+        toast.error(result.error, {
+          style: {
+            background: "#212121",
+            color: "#fff",
+          },
+        });
       }
-    )
-
-    const result = await res.json()
-// if an error field exists on the result object, make a dark themed error toast with the error message
-    if (result.error) {
-      toast.error(result.error, {
-        style: {
-          background: '#212121',
-          color: '#fff',
-        }
-      })
-    }
-    if (result.id) {
-      toast.success("Successfully Registered!", {
-        style: {
-          background: '#212121',
-          color: '#fff',
-        }
-      })
+      if (result.id) {
+        localStorage.setItem("ticket", result.id);
+        toast.success("Successfully Registered!", {
+          style: {
+            background: "#212121",
+            color: "#fff",
+          },
+        });
+        setTimeout(() => {
+          router.push("/tickets/" + result.id);
+        }, 1000);
+      }
     }
   };
   return (
@@ -59,8 +62,8 @@ export default function Home() {
         onSubmit={register}
       >
         <input
-        ref={inputRef}
-        autoComplete="email"
+          ref={inputRef}
+          autoComplete="email"
           placeholder="Enter email to register"
           type="email"
           className="xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-2/4 w-3/4 rounded-lg bg-app-b text-center p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
