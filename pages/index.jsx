@@ -1,46 +1,12 @@
 import Navbar from "../components/core/Navbar";
 import { useRef } from "react";
 import Scribble from "../components/plus/Scribble";
-import toast from "react-hot-toast";
+import { GitHub } from "react-feather"
 import { useRouter } from "next/router";
+import Link from "next/link";
 export default function Home() {
   const router = useRouter();
   const inputRef = useRef(null);
-  const register = async (e) => {
-    e.preventDefault();
-    const res = await fetch("/api/ticket/create", {
-      body: JSON.stringify({
-        email: inputRef.current.value,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
-    if (typeof window !== "undefined") {
-      const result = await res.json();
-      if (result.error) {
-        toast.error(result.error, {
-          style: {
-            background: "#212121",
-            color: "#fff",
-          },
-        });
-      }
-      if (result.id) {
-        localStorage.setItem("ticket", result.id);
-        toast.success("Successfully Registered!", {
-          style: {
-            background: "#212121",
-            color: "#fff",
-          },
-        });
-        setTimeout(() => {
-          router.push("/tickets/" + result.id);
-        }, 1000);
-      }
-    }
-  };
   return (
     <div className="flex flex-col min-h-screen bg-app-a">
       <Navbar />
@@ -57,24 +23,11 @@ export default function Home() {
         </p>
       </div>
 
-      <form
-        className="flex flex-col items-center justify-center mt-24"
-        onSubmit={register}
-      >
-        <input
-          ref={inputRef}
-          autoComplete="email"
-          placeholder="Enter email to register"
-          type="email"
-          className="xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-2/4 w-3/4 rounded-lg bg-app-b text-center p-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-          required
-        />
-        <input
-          type="submit"
-          value="Register"
-          className="transition duration-200 ease-in-out bg-blue-500 hover:bg-blue-600 xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-2/4 w-3/4 text-center p-3 rounded-md mt-4 cursor-pointer"
-        />
-      </form>
+      <div className="flex flex-col items-center justify-center mt-24">
+        <button className="flex flex-row items-center justify-center transition duration-200 ease-in-out bg-blue-600 border-2 border-app-b text-app-a hover:text-blue-600 hover:bg-app-a hover:border-blue-600 hover xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-2/4 w-3/4 text-center p-3 rounded-md mt-4 cursor-pointer">
+       <GitHub className="mr-4"/>  <Link href="/api/auth/login"> Register With GitHub </Link>
+        </button>
+      </div>
     </div>
   );
 }
