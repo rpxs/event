@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^3.5.0",
+    "@auth0/nextjs-auth0": "^1.6.1",
     "framer-motion": "^5.3.1",
     "next": "12.0.3",
     "npm": "^8.1.3",
@@ -17,6 +17,7 @@
     "react-dom": "17.0.2",
     "react-feather": "^2.0.9",
     "react-hot-toast": "^2.1.1",
+    "swr": "^1.1.0",
     "tailwindcss-animistacss": "^1.0.7"
   },
   "devDependencies": {
@@ -24,7 +25,6 @@
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.3",
     "postcss": "^8.3.11",
-    "prisma": "^3.5.0",
     "tailwindcss": "^2.2.19"
   }
 }

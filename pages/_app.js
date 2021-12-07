@@ -1,10 +1,13 @@
 import "tailwindcss/tailwind.css";
 import { Toaster } from "react-hot-toast";
+import { UserProvider } from "@auth0/nextjs-auth0";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Component {...pageProps} />
-      <Toaster position="bottom-right" reverseOrder={false} />
+      <UserProvider>
+        <Component {...pageProps} />
+        <Toaster position="bottom-right" reverseOrder={false} />
+      </UserProvider>
     </>
   );
 }
