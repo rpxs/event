@@ -9,7 +9,12 @@ export default function Scribble() {
         pathLength: 1,
         opacity: 1,
         transition: {
-          pathLength: { delay, type: "spring", duration: 1.0, bounce: 0 },
+          pathLength: {
+            delay,
+            type: "spring",
+            duration: 1.0,
+            bounce: 0,
+          },
           opacity: { delay, duration: 0.01 },
         },
       };
@@ -23,7 +28,7 @@ export default function Scribble() {
       width="210"
       height="80"
       viewBox="0, 0, 400,170"
-      className="absolute -ml-8 top-44"
+      className="absolute -ml-10 top-44"
       initial="hidden"
       animate="visible"
     >
@@ -32,7 +37,7 @@ export default function Scribble() {
         cy="83"
         rx="180"
         ry="60"
-        stroke="#C084FC"
+        stroke="#4f46e5"
         variants={draw}
         custom={1}
         strokeWidth={4}
@@ -43,7 +48,7 @@ export default function Scribble() {
         cy="80"
         rx="170"
         ry="60"
-        stroke="#C084FC"
+        stroke="#4f46e5"
         variants={draw}
         custom={2}
         strokeWidth={3}
@@ -54,7 +59,7 @@ export default function Scribble() {
         cy="80"
         rx="180"
         ry="70"
-        stroke="#C084FC"
+        stroke="#4f46e5"
         variants={draw}
         custom={3}
         strokeWidth={2}

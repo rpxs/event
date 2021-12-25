@@ -1,13 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
-import {Menu } from "react-feather";
+import { Menu, X } from "react-feather";
 import NavLink from "./NavLink";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import User from "../plus/User";
+import { useState } from "react";
 export default function Navbar() {
-
+  const [isOpen, setOpen] = useState(false);
+  const handleMenu = () => {
+    if (isOpen) setOpen(false);
+    if (!isOpen) setOpen(true);
+  };
+  let mobileLinkStr =
+    "md:flex flex-col md:flex-row md:items-center space-x-0 space-y-5 md:space-y-0 md:space-x-4 md:justify-center text-sm w-full md:w-auto select-none";
   return (
-<nav className="bg-app-b z-30 sticky top-0 px-6 border-b-2 border-gray-800">
+    <nav className="bg-app-b z-50 sticky top-0 px-6 border-b-2 border-gray-800 bg-gradient-to-r from-app-a to-slate-900 select-none scroll-smooth">
       <div className="container mx-auto">
         <div className="flex flex-wrap md:flex-no-wrap items-center justify-between sm:px-0 mx-auto lg:mx-none">
           <div>
@@ -16,24 +23,38 @@ export default function Navbar() {
                 <Link href="/" className="w-8" passHref>
                   <motion.div
                     className="w-8"
-                    initial={{ scale: 0.9 }}
-                    whileHover={{ scale: 1 }}
+                    initial={{ scale: 1.3 }}
+                    whileHover={{ scale: 1.5 }}
                   >
-                    <img src="/node.png" className="w-8" alt="Logo"/>
+                    <img
+                      src="/logo.png"
+                      className="w-8"
+                      alt="Logo"
+                    />
                   </motion.div>
                 </Link>
               </div>
             </div>
           </div>
-          <div className="flex md:hidden cursor-pointer bg-app-a items-center px-3 py-2 rounded text-white">
-            <Menu />
+          <div
+            onClick={handleMenu}
+            className="flex md:hidden cursor-pointer bg-app-a items-center px-3 py-2 rounded text-white"
+          >
+            {isOpen ? <X /> : <Menu />}
           </div>
-          <ul className="space-x-0 space-y-5 hidden md:flex flex-col md:flex-row md:items-center md:space-y-0 md:space-x-4 md:justify-center text-sm w-full font-medium font-mono md:w-auto select-none">
+          <ul
+            className={
+              isOpen
+                ? "block pb-4 " + mobileLinkStr
+                : "hidden " + mobileLinkStr
+            }
+          >
+            {" "}
             <NavLink text="About" to="/about" />
             <NavLink text="Sponsors" to="/sponsors" />
             <NavLink text="Speakers" to="/speakers" />
             <NavLink text="Expo" to="/expo" />
-            <User/>
+            <User />
           </ul>
         </div>
       </div>
