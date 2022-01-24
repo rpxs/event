@@ -6,7 +6,10 @@ function MyApp({ Component, pageProps }) {
     <>
       <UserProvider>
         <Component {...pageProps} />
-        <Toaster position="bottom-right" reverseOrder={false} />
+        <Toaster
+          position="bottom-right"
+          reverseOrder={false}
+        />
       </UserProvider>
     </>
   );
