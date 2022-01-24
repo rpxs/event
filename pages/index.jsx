@@ -21,11 +21,10 @@ export default function Home() {
     } else {
       // Render a countdown
       return (
-        <div className="flex flex-col items-start text-white text-xl mt-14 uppercase tracking-widest font-bold mx-4">
-          <p>{days} days</p>
-          <p>{hours} hours</p>
-          <p>{minutes} minutes</p>
-          <p>{seconds} seconds</p>
+        <div className="inline-block items-start text-white text-xl mt-14 uppercase tracking-widest font-bold mx-4">
+          <p>{days} days, {hours} hours</p>
+          <p>{minutes} minutes, {seconds} seconds</p>
+          <p></p>
         </div>
       );
     }

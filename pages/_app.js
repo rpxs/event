@@ -1,7 +1,6 @@
 import "tailwindcss/tailwind.css";
 import { Toaster } from "react-hot-toast";
 import { UserProvider } from "@auth0/nextjs-auth0";
-import "../globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
