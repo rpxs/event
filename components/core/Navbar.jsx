@@ -14,7 +14,7 @@ export default function Navbar() {
   let mobileLinkStr =
     "md:flex flex-col md:flex-row md:items-center space-x-0 space-y-5 md:space-y-0 md:space-x-4 md:justify-center text-sm w-full md:w-auto select-none";
   return (
-    <nav className="bg-app-b z-50 sticky top-0 px-6 border-b-2 border-gray-800 bg-gradient-to-r from-app-a to-slate-900 select-none scroll-smooth">
+    <nav className="z-50 sticky top-0 px-6 border-b-2 border-gray-800 bg-gradient-to-r from-app-a to-slate-900 select-none scroll-smooth">
       <div className="container mx-auto">
         <div className="flex flex-wrap md:flex-no-wrap items-center justify-between sm:px-0 mx-auto lg:mx-none">
           <div>
@@ -46,13 +46,13 @@ export default function Navbar() {
             className={
               isOpen
                 ? "block pb-4 " + mobileLinkStr
-                : "hidden " + mobileLinkStr
+                : "hidden " + mobileLinkStr   
             }
           >
             {" "}
             <NavLink text="About" to="/about" />
             <NavLink text="Sponsors" to="/sponsors" />
-            <NavLink text="Speakers" to="/speakers" />
+            <NavLink text="Schedule" to="/schedule" />
             <NavLink text="Expo" to="/expo" />
             <User />
           </ul>

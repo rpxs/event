@@ -2,6 +2,7 @@
 import { useUser } from "@auth0/nextjs-auth0";
 import { RotateCw } from "react-feather";
 import Link from "next/link";
+import NavLink from "../core/NavLink";
 export default function User() {
   const { user, error, isLoading } = useUser();
   if (isLoading)
@@ -19,18 +20,13 @@ export default function User() {
     );
   return (
     user && (
-      <li>
-        <Link
-          href="/api/auth/logout"
-          className="w-8"
-          passHref
-        >
-          <img
-            className="w-8 rounded-full"
-            src={user.picture}
-            alt="Profile Picture"
-          />
-        </Link>
+      <li className="flex flex-row items-center">
+        <NavLink text={user.name} to="/api/auth/logout" />
+        <img
+          className="w-8 rounded-full"
+          src={user.picture}
+          alt="Profile Picture"
+        />
       </li>
     )
   );

@@ -18,10 +18,7 @@ export default function Home() {
             transition={{ duration: 2.2 }}
             className="text-white mx-14 font-extrabold text-6xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl mt-6"
           >
-            TSA Conference{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-tr from-sky-800 to-emerald-500">
-              2022
-            </span>
+            Sponsors
           </motion.h1>
         </div>
       </div>
