@@ -51,7 +51,7 @@ export default function Navbar() {
           >
             {" "}
             <NavLink text="About" to="/about" />
-            <NavLink text="Sponsors" to="/sponsors" />
+            <NavLink text="Docs" to="/docs" />
             <NavLink text="Schedule" to="/schedule" />
             <NavLink text="Expo" to="/expo" />
             <User />
