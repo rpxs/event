@@ -32,7 +32,7 @@ export default function Schedule() {
           >
             Schedule
           </motion.h1>
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-3 mx-3 mt-5 w-2/3 sm:w-2/3 md:w-1/2">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 grid-cols-1 gap-3 mx-3 mt-5 w-2/3 sm:w-2/3">
             <EventCard
               title="Day One: 6:00 PM"
               text="Opening Ceremony"
