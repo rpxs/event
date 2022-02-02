@@ -38,9 +38,19 @@ export default function Schedule() {
               text="Opening Ceremony"
               stage="T"
             />
-                        <EventCard
+            <EventCard
               title="Day Two: 11:00 AM"
               text="Interviews"
+              stage="T"
+            />
+            <EventCard
+              title="Day Two: 2:00 PM"
+              text="Interviews Again"
+              stage="T"
+            />
+            <EventCard
+              title="Day Three: 11:00 AM"
+              text="Team Event Interviews"
               stage="T"
             />
           </div>
