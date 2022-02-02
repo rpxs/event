@@ -20,7 +20,7 @@ function EventCard(props) {
 
 export default function Schedule() {
   return (
-    <>
+    <html lang="en">
       <Navbar />
       <div className="flex flex-col min-h-screen bg-gradient-to-r from-app-a to-slate-900 overflow-hidden scroll-smooth">
         <div className="flex flex-col items-center justify-center w-screen mt-36 antialiased text-center">
@@ -56,6 +56,6 @@ export default function Schedule() {
           </div>
         </div>
       </div>
-    </>
+    </html>
   );
 }

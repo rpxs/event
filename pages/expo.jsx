@@ -8,7 +8,7 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <>
+    <html lang="en">
       <Navbar />
       <div className="flex flex-col min-h-screen bg-gradient-to-r from-app-a to-slate-900 overflow-hidden scroll-smooth">
         <div className="flex flex-col items-center justify-center w-screen mt-36 antialiased text-center">
@@ -25,6 +25,6 @@ export default function Home() {
           </motion.h1>
         </div>
       </div>
-    </>
+    </html>
   );
 }

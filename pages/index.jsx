@@ -34,7 +34,7 @@ export default function Home() {
     }
   };
   return (
-    <>
+    <html lang="en">
       <Head></Head>
       <Navbar />
       <div className="flex flex-col min-h-screen bg-gradient-to-r from-app-a to-slate-900 overflow-hidden overflow-none">
@@ -66,6 +66,6 @@ export default function Home() {
         </div>
       </div>
       <Footer />
-    </>
+    </html>
   );
 }
