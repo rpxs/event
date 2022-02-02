@@ -5,8 +5,6 @@ import Countdown from "react-countdown";
 import { motion } from "framer-motion";
 
 export default function Home() {
-  const router = useRouter();
-
   return (
     <html lang="en">
       <Navbar />
