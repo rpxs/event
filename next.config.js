@@ -10,6 +10,6 @@ module.exports = withMDX({
   pageExtensions: ["js", "jsx", "md", "mdx"],
   reactStrictMode: true,
   images: {
-    domains: ["picsum.photos"],
+    domains: ["picsum.photos", "cdn.discordapp.com"],
   },
 });

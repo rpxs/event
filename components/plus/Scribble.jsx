@@ -28,7 +28,7 @@ export default function Scribble() {
       width="210"
       height="80"
       viewBox="0, 0, 400,170"
-      className="absolute -ml-10 top-44"
+      className="absolute top-44 -ml-10"
       initial="hidden"
       animate="visible"
     >

@@ -1,15 +1,15 @@
 // YourComponent.stories.js|jsx
 
-import {NavLink} from './NavLink';
+import { NavLink } from "./NavLink";
 
 //👇 This default export determines where your story goes in the story list
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   /* 👇 The title prop is optional.
-  * See https://storybook.js.org/docsreact/configure/overview#configure-story-loading
-  * to learn how to generate automatic titles
-  */
-  title: 'NavLink',
+   * See https://storybook.js.org/docsreact/configure/overview#configure-story-loading
+   * to learn how to generate automatic titles
+   */
+  title: "NavLink",
   component: NavLink,
 };
 

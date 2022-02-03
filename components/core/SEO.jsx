@@ -5,7 +5,10 @@ export default function SEO(props) {
   return (
     <Head>
       <title>{title}</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta
+        name="viewport"
+        content="initial-scale=1.0, width=device-width"
+      />
       <meta name="description" content={desc} />
       <meta name="keywords" content={keywords} />
       <meta name="og:image" content={img} />

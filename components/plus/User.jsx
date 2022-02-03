@@ -14,7 +14,7 @@ export default function User() {
   if (error) return <li>{error.message}</li>;
   if (!user)
     return (
-      <li className="text-sm text-gray-400 font-medium font-sans hover:text-white duration-200 transition ease-in-out px-2 rounded-sm">
+      <li className="rounded-sm px-2 font-sans text-sm font-medium text-gray-400 transition duration-200 ease-in-out hover:text-white">
         <Link href="/api/auth/login">Login</Link>
       </li>
     );

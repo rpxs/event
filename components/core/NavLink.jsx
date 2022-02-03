@@ -12,7 +12,7 @@ export default function NavLink(props) {
       <Link href={to}>
         <a
           style={style}
-          className="text-sm text-gray-400 font-medium font-sans hover:text-white duration-200 transition ease-in-out p-2 rounded-sm"
+          className="rounded-sm p-2 font-sans text-sm font-medium text-gray-400 transition duration-200 ease-in-out hover:text-white"
         >
           {text}
         </a>

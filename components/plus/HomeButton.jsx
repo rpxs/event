@@ -8,7 +8,7 @@ export default function HomeButton() {
     return (
       <motion.div
         whileHover={{ scale: 1.03 }}
-        className="flex flex-row items-center justify-center transition duration-200 ease-in-out bg-gray-800 hover:shadow-md border-2 border-transparent text-white hover:bg-transparent hover:border-2 hover:border-gray-800 xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-2/4 w-3/4 text-center p-3 rounded-md mt-4 cursor-pointer"
+        className="mt-4 flex w-3/4 cursor-pointer flex-row items-center justify-center rounded-md border-2 border-transparent bg-gray-800 p-3 text-center text-white transition duration-200 ease-in-out hover:border-2 hover:border-gray-800 hover:bg-transparent hover:shadow-md sm:w-2/4 md:w-1/2 lg:w-1/3 xl:w-1/4"
       >
         <RotateCw className="mr-4 animate-spin" />
         Loading...
@@ -19,21 +19,20 @@ export default function HomeButton() {
       <motion.a
         href="/api/auth/login"
         whileHover={{ scale: 1.03 }}
-        className="flex flex-row items-center justify-center transition duration-200 ease-in-out bg-gray-800 hover:shadow-md border-2 border-transparent text-white hover:bg-transparent hover:border-2 hover:border-gray-800 xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-2/4 w-3/4 text-center p-3 rounded-md mt-4 cursor-pointer"
+        className="mt-4 flex w-3/4 cursor-pointer flex-row items-center justify-center rounded-md border-2 border-transparent bg-gray-800 p-3 text-center text-white transition duration-200 ease-in-out hover:border-2 hover:border-gray-800 hover:bg-transparent hover:shadow-md sm:w-2/4 md:w-1/2 lg:w-1/3 xl:w-1/4"
       >
         <GitHub className="mr-4" />
         Register With GitHub
       </motion.a>
     );
-    return (
-        <motion.a
-        href="/schedule"
-        whileHover={{ scale: 1.03 }}
-        className="flex flex-row items-center justify-center transition duration-200 ease-in-out bg-gray-800 hover:shadow-md border-2 border-transparent text-white hover:bg-transparent hover:border-2 hover:border-gray-800 xl:w-1/4 lg:w-1/3 md:w-1/2 sm:w-2/4 w-3/4 text-center p-3 rounded-md mt-4 cursor-pointer"
-      >
-        <Check className="mr-4" />
-        Check the Schedule
-      </motion.a>
-    )
-
+  return (
+    <motion.a
+      href="/schedule"
+      whileHover={{ scale: 1.03 }}
+      className="mt-4 flex w-3/4 cursor-pointer flex-row items-center justify-center rounded-md border-2 border-transparent bg-gray-800 p-3 text-center text-white transition duration-200 ease-in-out hover:border-2 hover:border-gray-800 hover:bg-transparent hover:shadow-md sm:w-2/4 md:w-1/2 lg:w-1/3 xl:w-1/4"
+    >
+      <Check className="mr-4" />
+      Check the Schedule
+    </motion.a>
+  );
 }

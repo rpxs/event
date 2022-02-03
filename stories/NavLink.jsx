@@ -4,16 +4,16 @@ export function NavLink(props) {
 
   return (
     <>
-    <li>
-      <Link href={to}>
-        <a
-          className="text-sm text-gray-400 font-medium font-sans hover:text-white duration-200 transition ease-in-out p-2 rounded-sm"
-          style={{}}
-        >
-          {text}
-        </a>
-      </Link>
-    </li>
+      <li>
+        <Link href={to}>
+          <a
+            className="rounded-sm p-2 font-sans text-sm font-medium text-gray-400 transition duration-200 ease-in-out hover:text-white"
+            style={{}}
+          >
+            {text}
+          </a>
+        </Link>
+      </li>
     </>
   );
 }

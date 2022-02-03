@@ -10,16 +10,16 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col min-h-screen bg-gradient-to-r from-app-a to-slate-900 overflow-hidden scroll-smooth">
-        <div className="flex flex-col items-center justify-center w-screen mt-36 antialiased text-center">
+      <div className="flex min-h-screen flex-col overflow-hidden scroll-smooth bg-gradient-to-r from-app-a to-slate-900">
+        <div className="mt-36 flex w-screen flex-col items-center justify-center text-center antialiased">
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2.2 }}
-            className="text-white mx-14 font-extrabold text-6xl sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl mt-6"
+            className="mx-14 mt-6 text-6xl font-extrabold text-white sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl"
           >
             TSA Conference{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-tr from-sky-800 to-emerald-500">
+            <span className="bg-gradient-to-tr from-sky-800 to-emerald-500 bg-clip-text text-transparent">
               2022
             </span>
           </motion.h1>
