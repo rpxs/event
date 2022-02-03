@@ -5,7 +5,7 @@ export default function Footer() {
         <li>
           Follow us on{" "}
           <a
-            href="https://twitter.com/reikerjack"
+            href="https://twitter.com/nationaltsa"
             target="_blank"
             rel="noreferrer noopener"
             className="font-bold"
