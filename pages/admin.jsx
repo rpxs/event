@@ -20,7 +20,7 @@ export default function Admin({ user }) {
     );
   } else
     return (
-      <html lang="en">
+      <>
       <div className="flex flex-col min-h-screen bg-app-a">
         <Navbar />
         <div className="flex flex-col items-center justify-center w-screen mt-36 antialiased text-center">
@@ -45,7 +45,7 @@ export default function Admin({ user }) {
           />
         </div>
       </div>
-      </html>
+      </>
     );
 }
 export const getServerSideProps = withPageAuthRequired();

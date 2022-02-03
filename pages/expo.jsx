@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <html lang="en">
+    <>
       <Navbar />
       <div className="flex flex-col min-h-screen bg-gradient-to-r from-app-a to-slate-900 overflow-hidden scroll-smooth">
         <div className="flex flex-col items-center justify-center w-screen mt-36 antialiased text-center">
@@ -29,6 +29,6 @@ sponsor 2
 sponsor 3
         </p>
       </div>
-    </html>
+    </>
   );
 }
