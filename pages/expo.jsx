@@ -1,9 +1,18 @@
 import Navbar from "../components/core/Navbar";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import Countdown from "react-countdown";
 import { motion } from "framer-motion";
-
+const Link = (props) => {
+  return (
+    <a
+      className="text-current underline decoration-blue-500 decoration-2 underline-offset-2 hover:text-teal-500 hover:decoration-teal-500 hover:decoration-4"
+      href={props.to}
+      target="_blank"
+      rel="noopener
+    noreferrer"
+    >
+      {props.text}
+    </a>
+  );
+};
 export default function Home() {
   return (
     <>
@@ -19,9 +28,17 @@ export default function Home() {
             Expo
           </motion.h1>
         </div>
-        <p className="text-white">sponsor 1</p>
-        <p className="text-white">sponsor 2</p>
-        <p className="text-white">sponsor 3</p>
+        <div className="mt-6 flex flex-col items-center gap-4 text-left text-4xl font-semibold text-white">
+          <Link
+            to="https://apply.gcu.edu/Account/Login"
+            text="Grand Canyon University"
+          />
+          <Link to="https://x-cal.us/" text="X-CAL" />
+          <Link
+            to="http://cccs.edu/"
+            text="Colorado Community College System"
+          />
+        </div>
       </div>
     </>
   );

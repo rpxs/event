@@ -15,14 +15,17 @@ export default function Home() {
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 2.2 }}
-            className="mx-14 mt-6 text-6xl font-extrabold text-white sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl"
+            transition={{ duration: 1.3 }}
+            className="mx-14 mt-6 bg-gradient-to-tr from-sky-800 to-emerald-500 bg-clip-text text-6xl font-extrabold text-transparent sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl"
           >
-            TSA Conference{" "}
-            <span className="bg-gradient-to-tr from-sky-800 to-emerald-500 bg-clip-text text-transparent">
-              2022
-            </span>
+            About
           </motion.h1>
+          <p className="my-3 w-2/3 max-w-prose text-left font-medium text-white">
+            The Technology Student Association (TSA) is a
+            national organization of students engaged in
+            STEM (science, technology, engineering, and
+            mathematics).
+          </p>
         </div>
       </div>
     </>
