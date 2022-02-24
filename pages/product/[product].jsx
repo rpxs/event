@@ -9,6 +9,7 @@ export default function Product() {
     const router = useRouter();
     const { product } = router.query;
     const { data } = useSWR(`/api/product/${product}`, fetcher);
+    const notify = () => console.log
   return (
     <>
       <Navbar />
