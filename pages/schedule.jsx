@@ -4,7 +4,7 @@ import Link from "next/link";
 import Countdown from "react-countdown";
 import { motion } from "framer-motion";
 import Footer from "../components/core/Footer";
-
+import Head from "next/head";
 function EventCard(props) {
   const { text, title, stage } = props;
   return (
@@ -22,6 +22,9 @@ function EventCard(props) {
 export default function Schedule() {
   return (
     <>
+          <Head>
+        <title>TSA Conference - Schedule</title>
+      </Head>
       <Navbar />
       <div className="flex min-h-screen flex-col overflow-hidden scroll-smooth bg-gradient-to-r from-app-a to-slate-900">
         <div className="mt-36 flex w-screen flex-col items-center justify-center text-center antialiased">

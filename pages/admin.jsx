@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Navbar from "../components/core/Navbar";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
-
+import Head from "next/head"
 export default function Admin({ user }) {
   if (user.email != "me@rpxs.me") {
     return (

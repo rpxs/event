@@ -1,5 +1,6 @@
 import Navbar from "../components/core/Navbar";
 import { motion } from "framer-motion";
+import Head from "next/head"
 const Link = (props) => {
   return (
     <a
@@ -16,6 +17,9 @@ const Link = (props) => {
 export default function Sponsors() {
   return (
     <>
+          <Head>
+        <title>TSA Conference - Sponsors</title>
+      </Head>
       <Navbar />
       <div className="flex min-h-screen flex-col overflow-hidden scroll-smooth bg-gradient-to-r from-app-a to-slate-900">
         <div className="mt-36 flex w-screen flex-col items-center justify-center text-center antialiased">

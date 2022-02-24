@@ -34,7 +34,9 @@ export default function Home() {
   };
   return (
     <>
-      <Head></Head>
+      <Head>
+        <title>TSA Conference - Home</title>
+      </Head>
       <Navbar />
       <div className="overflow-none flex min-h-screen flex-col overflow-hidden bg-gradient-to-r from-app-a to-slate-900">
         <div className="mt-36 flex w-screen flex-col items-center justify-center text-center antialiased">

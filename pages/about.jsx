@@ -2,11 +2,14 @@ import Navbar from "../components/core/Navbar";
 import Footer from "../components/core/Footer";
 import officerImage from "../public/tsaofficers.webp";
 import Image from "next/image";
-
+import Head from "next/head"
 import { motion } from "framer-motion";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>TSA Conference - Home</title>
+      </Head>
       <Navbar />
       <div className="flex min-h-screen flex-col overflow-hidden scroll-smooth bg-gradient-to-r from-app-a to-slate-900">
         <div className="mt-36 flex w-screen flex-col items-center justify-center text-center antialiased">
