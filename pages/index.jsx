@@ -3,7 +3,6 @@ import Footer from "../components/core/Footer";
 import Scribble from "../components/plus/Scribble";
 import HomeButton from "../components/plus/HomeButton";
 import Head from "next/head";
-import { GitHub } from "react-feather";
 import Countdown from "react-countdown";
 import { motion } from "framer-motion";
 

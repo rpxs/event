@@ -53,7 +53,7 @@ export default function Navbar() {
             <NavLink text="About" to="/about" />
             <NavLink text="Docs" to="/docs" />
             <NavLink text="Schedule" to="/schedule" />
-            <NavLink text="Expo" to="/expo" />
+            <NavLink text="Sponsors" to="/sponsors" />
             <User />
           </ul>
         </div>

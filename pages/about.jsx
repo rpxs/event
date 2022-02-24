@@ -1,12 +1,10 @@
 import Navbar from "../components/core/Navbar";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import Countdown from "react-countdown";
+import Footer from "../components/core/Footer";
+import officerImage from "../public/tsaofficers.png";
+import Image from "next/image";
+
 import { motion } from "framer-motion";
-
 export default function Home() {
-  const router = useRouter();
-
   return (
     <>
       <Navbar />
@@ -16,7 +14,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.3 }}
-            className="mx-14 mt-6 bg-gradient-to-tr from-sky-800 to-emerald-500 bg-clip-text text-6xl font-extrabold text-transparent sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl"
+            className="mx-14 mt-6 text-white text-6xl font-extrabold sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl"
           >
             About
           </motion.h1>
@@ -26,8 +24,17 @@ export default function Home() {
             STEM (science, technology, engineering, and
             mathematics).
           </p>
+          <Image
+              alt="an image of 5 TSA officers"
+              src={officerImage}
+              width={300}
+              height={191}
+              layout="fixed"
+              placeholder="blur"
+            />
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

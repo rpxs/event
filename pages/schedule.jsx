@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Countdown from "react-countdown";
 import { motion } from "framer-motion";
+import Footer from "../components/core/Footer";
 
 function EventCard(props) {
   const { text, title, stage } = props;
@@ -56,6 +57,7 @@ export default function Schedule() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

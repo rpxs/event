@@ -13,7 +13,7 @@ const Link = (props) => {
     </a>
   );
 };
-export default function Home() {
+export default function Sponsors() {
   return (
     <>
       <Navbar />
@@ -25,10 +25,10 @@ export default function Home() {
             transition={{ duration: 1.2 }}
             className="mx-14 mt-6 text-6xl font-extrabold text-white sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl"
           >
-            Expo
+            Sponsors
           </motion.h1>
         </div>
-        <div className="mt-6 flex flex-col items-center gap-4 text-left text-4xl font-semibold text-white">
+        <div className="mt-6 mx-2 flex flex-col items-center text-center gap-4 text-left text-4xl font-semibold text-white">
           <Link
             to="https://apply.gcu.edu/Account/Login"
             text="Grand Canyon University"
