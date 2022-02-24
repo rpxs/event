@@ -16,9 +16,7 @@ export default function Product() {
       <Head>
         <title>TSA Shop - {data?.imageAlt ?? "loading..."}</title>
       </Head>
-      <Navbar />
-      <Cart />
-      <div className="self-center max-w-full">
+     <div className="self-center max-w-full">
         <h1 className="text-white text-4xl w-60 font-semibold my-6 self-center">
           {data?.imageAlt ?? "Unknown Item"}
         </h1>
