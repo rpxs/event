@@ -54,6 +54,8 @@ export default function Navbar() {
             <NavLink text="Docs" to="/docs" />
             <NavLink text="Schedule" to="/schedule" />
             <NavLink text="Sponsors" to="/sponsors" />
+            <NavLink text="Shop" to="/shop" />
+
             <User />
           </ul>
         </div>

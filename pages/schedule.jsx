@@ -29,7 +29,7 @@ export default function Schedule() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2.2 }}
-            className="mx-14 text-6xl font-extrabold text-white sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl"
+            className="mx-14 text-6xl font-bold text-white sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl"
           >
             Schedule
           </motion.h1>

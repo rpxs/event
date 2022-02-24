@@ -8,7 +8,7 @@ export default function Footer() {
             href="https://twitter.com/nationaltsa"
             target="_blank"
             rel="noreferrer noopener"
-            className="font-bold"
+            className="font-bold text-current underline decoration-blue-500 decoration-2 underline-offset-2 hover:text-teal-500 hover:decoration-teal-500"
           >
             Twitter
           </a>

@@ -23,7 +23,7 @@ export default function Sponsors() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2 }}
-            className="mx-14 mt-6 text-6xl font-extrabold text-white sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl"
+            className="mx-14 mt-6 text-6xl font-bold text-white sm:text-6xl md:text-6xl lg:text-7xl xl:text-7xl"
           >
             Sponsors
           </motion.h1>
