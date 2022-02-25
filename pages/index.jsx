@@ -16,7 +16,7 @@ export default function Home() {
   }) => {
     if (completed) {
       // Render a complete state
-      return <iframe width="883" height="497" className="w-2/3 my-10" src="https://www.youtube.com/embed/fK0nXjGo19s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      return <iframe width="883" height="497" className="w-2/3 my-10" src="https://www.youtube.com/embed/fK0nXjGo19s" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
     } else {
       // Render a countdown
       return (
@@ -61,7 +61,7 @@ export default function Home() {
             )}
             renderer={renderer}
           />
-          <p className="text-white">(Georgia TSA State Conference because I can't find a National one. :)</p>
+          <p className="text-white">(Georgia TSA State Conference because I can&apos;t find a National one. :)</p>
         </div>
         <div className="mt-14 flex flex-col items-center justify-center md:mt-14 lg:mt-14 xl:mt-14">
           <HomeButton />
